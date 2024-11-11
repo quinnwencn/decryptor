@@ -1,12 +1,12 @@
 TEMPLATE = app
-TARGET = hello
+TARGET = decryptor
 
-QT = core gui widgets network
+QT = core gui widgets
 
-OPENSSL_DIR = "C:/Program Files/OpenSSL-Win64"
+OPENSSL_DIR = "C:/msys64/usr/local"
 
 INCLUDEPATH += $$OPENSSL_DIR/include
-LIBS += -L$$OPENSSL_DIR/lib/VC/x64/MD -llibssl -llibcrypto
+LIBS += -L$$OPENSSL_DIR/lib64 -lssl -lcrypto
 
 SOURCES += \
     asym_decryptor.cpp \
